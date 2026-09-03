@@ -9,9 +9,10 @@ else:
 
 # Ejemplo indica si una persona puede votar o no. Para ello debe ser mayor o igual de 18 y ser ciudadano
 
-    edad = 20
+edad = 20
 es_ciudadano = True
-if edad >= 18 and es_ciudadano:
+
+if edad >= 18 and es_ciudadano == True:
     print("Podés votar.")
 else:
     print("No podés votar.")

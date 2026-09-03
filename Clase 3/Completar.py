@@ -4,14 +4,13 @@ Por ejemplo:
 - “La edad debe ser mayor a 18.”
 - “El correo no puede estar vacío.” """
 
-print("-----Sus datos-----")
+print("-------Sus datos--------")
 nombre = input("Nombre: ")
 apellido = input("Apellido: ")
 edad = int(input("Edad: "))
 email = input("Correo electrico: ")
-print("-------------------")
-
-if nombre == "" or apellido == "" or edad < 18 or email == "":
+print("------------------------")
+""" if nombre == "" or apellido == "" or edad < 18 or email == "":
     print("\n-Error!-")
 
 if nombre == "" or apellido == "":
@@ -27,7 +26,23 @@ else:
 if email == "":
     print("Falta completar")
 else:
-    print("Correo electronico:", email)
+    print("Correo electronico:", email) """
 
 # Necesito que cuando haya algun error, solo se muestre el mensaje de cual fue el problema y no se vea los datos ingresados correctamente
 
+print("\n----Datos Ingresados----")
+if nombre == "":
+    print("Nombre no valido")
+elif apellido == "":
+    print("Apellido no valido")
+elif edad < 18 or edad == 0:
+    print("Edad no valida")
+elif email == "":
+    print("Correo no valido")
+else:
+    print("Nombre completo:", nombre + " " + apellido)
+    print("Es mayor de edad")
+    print("Correo electronico:", email)
+print("------------------------")
+
+# Quisiera que si hay mas de un error los muestre a todos, sin mostrar a los que estan validos. Entiendo que si quiero hacer esto debería de meter todo en un mismo if o match. Tal vez estaría bien meter todo los posibles errores en un solo match y marcar ese matc como False y otro que esten todas las opciones validas en un solo matc True.
